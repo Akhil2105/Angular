@@ -1,4 +1,3 @@
-// src/app/welcome/welcome.component.ts
 import { Component } from '@angular/core';
 
 @Component({

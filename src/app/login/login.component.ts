@@ -1,4 +1,5 @@
-// login.component.ts
+
+import { query } from '@angular/animations';
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,8 +10,12 @@ import { Component } from '@angular/core';
 export class LoginComponent {
   onSubmit(loginForm: any): void {
     if (loginForm.valid) {
-      // Implement your login logic here
+    
       console.log('Login Form Submitted:', loginForm.value);
     }
   }
 }
+let paragraphElement = document.querySelector('.signup');
+paragraphElement?.addEventListener('click', function() {
+  alert('Button clicked!');
+});

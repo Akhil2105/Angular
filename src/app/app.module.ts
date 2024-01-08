@@ -7,11 +7,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
-  declarations: [AppComponent, WelcomeComponent, LoginComponent],
-  imports: [BrowserModule, FormsModule, RouterModule, AppRoutingModule], // Add RouterModule here
+  declarations: [AppComponent, WelcomeComponent, LoginComponent, SignupComponent],
+  imports: [BrowserModule, FormsModule, RouterModule, AppRoutingModule, RouterModule.forRoot([], { enableTracing: true })], // Add RouterModule here
 
   bootstrap: [AppComponent],
 })

@@ -1,0 +1,38 @@
+
+button
+{
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+label{
+    display: block;
+    padding: 2px;
+    margin: auto;
+}
+form{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #ecc7c7;
+    border: 1px solid #ca3f3f;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+button{
+    display: block;
+    margin-top: 2px;
+}
+button:hover{
+    background-color: aqua;
+    
+}
+.signup{
+    margin: auto;
+    align-items: center;
+    place-content: allign-content;
+;
+}
