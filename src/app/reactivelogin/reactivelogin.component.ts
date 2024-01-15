@@ -19,7 +19,7 @@ export class ReactiveLoginComponent implements OnInit {
   onSubmit() {
     if (this.loginForm.valid) {
       console.log('Form submitted!', this.loginForm.value);
-      // Add your authentication logic here
+      
     }
   }
 }
