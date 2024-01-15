@@ -1,0 +1,12 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <label for="username">Username:</label>
+    <input type="text" id="username" formControlName="username">
+    {{ loginForm.get('username')?.hasError('required') ? 'Username is required.' : '' }}
+  
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password">
+    {{ loginForm.get('password')?.hasError('required') ? 'Password is required.' : '' }}
+  
+    <button type="submit" [disabled]="loginForm.invalid">Login</button>
+  </form>
+  

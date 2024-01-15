@@ -1,19 +1,19 @@
-// src/app/app.module.ts
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router'; // Import RouterModule and Routes
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-
+import { ReactiveLoginComponent } from './reactivelogin/reactivelogin.component';
 
 @NgModule({
-  declarations: [AppComponent, WelcomeComponent, LoginComponent, SignupComponent],
-  imports: [BrowserModule, FormsModule, RouterModule, AppRoutingModule, RouterModule.forRoot([], { enableTracing: true })], // Add RouterModule here
-
+  declarations: [AppComponent, WelcomeComponent, LoginComponent, SignupComponent, ReactiveLoginComponent],
+  imports: [BrowserModule, FormsModule, RouterModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,15 +1,15 @@
 <div>
-    <h2>Login</h2>
-    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" ngModel required>
-  
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" ngModel required>
-  
-      <button type="submit" [disabled]="!loginForm.valid">Login</button>
-    </form>
-  
-    <p class="signup">New customer? <a routerLink="/welcome">Sign up here.</a></p>
-    <p><a routerLink="/welcome">Welcome</a></p> 
-  </div>
+  <h2>Login</h2>
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" formControlName="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" formControlName="password" required>
+
+    <button type="submit" [disabled]="!loginForm.valid">Login</button>
+  </form>
+
+  <p class="signup">New customer? <a routerLink="/signup">Sign up here.</a></p>
+  <p><a routerLink="/welcome">Home</a></p>
+</div>

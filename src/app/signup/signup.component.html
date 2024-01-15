@@ -1,8 +1,7 @@
 
-
 <div>
-  <h2>signup</h2>
-  <form #signupForm="ngForm" (Submit)="onSubmit(signupForm)">
+  <h2>Sign Up</h2>
+  <form #signupForm="ngForm" (submit)="onSubmit(signupForm)">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" [(ngModel)]="user.name" required>
 
@@ -16,5 +15,5 @@
   </form>
 
   <p class="login">Already a customer? <a routerLink="/login">Log in here.</a></p>
-  <p><a routerLink="/welcome">Welcome</a></p>
+  
 </div>

@@ -1,0 +1,33 @@
+form
+{
+    background-color: rgb(177, 174, 199);
+    max-width: 300px;
+    max-height: 250px;
+    padding: 100px,100px;
+    border: 10px;
+    border-radius: 4px;
+    margin:left;
+
+}
+label{
+    display: block;
+    width: auto;
+    height: auto;
+    
+}
+button:hover{
+    background-color: bisque;
+}
+button{
+    background-color: rgb(231, 162, 121);
+    display: block;
+}
+body{
+    border: 12px;
+    padding: 20px;
+    margin: auto;
+}
+.login{
+    margin: auto;
+    margin-top: 10px;
+}

@@ -4,12 +4,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { ReactiveLoginComponent } from './reactivelogin/reactivelogin.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/welcome', pathMatch: 'full' },
   { path: 'welcome', component: WelcomeComponent },
   { path: 'login', component: LoginComponent },
   {path: 'signup', component: SignupComponent},
+  { path: 'reactive-login', component: ReactiveLoginComponent },
+
 ];
 
 @NgModule({

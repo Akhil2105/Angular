@@ -1,4 +1,4 @@
-// src/app/signup/signup.component.ts
+
 
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
@@ -17,8 +17,8 @@ export class SignupComponent {
 
   onSubmit(signupForm: NgForm): void {
     if (signupForm.valid) {
-  
-      this.router.navigate(['/signup']);
+    
+      this.router.navigate(['/welcome']);
     }
   }
 }
