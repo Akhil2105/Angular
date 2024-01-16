@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-login',
@@ -9,17 +9,14 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class ReactiveLoginComponent implements OnInit {
   loginForm!: FormGroup;
 
+  constructor(private fb: FormBuilder) {}
+
   ngOnInit() {
-    this.loginForm = new FormGroup({
-      username: new FormControl('', [Validators.required]),
-      password: new FormControl('', [Validators.required])
+    this.loginForm = this.fb.group({
+      username: ['', [Validators.required, Validators.minLength(3)]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
-
-  onSubmit() {
-    if (this.loginForm.valid) {
-      console.log('Form submitted!', this.loginForm.value);
-      
-    }
-  }
 }
+
