@@ -32,9 +32,13 @@ button:hover{
     background-color: aqua;
     
 }
-.signup{
+.signup, .Home {
     margin: auto;
     align-items: center;
     place-content: allign-content;
+    display: block;
+    font-weight: bold;
+    color: #e48f8f;
+    
 
 }

@@ -9,29 +9,31 @@ body {
   
   h2 {
     color: #333;
+    background-color: #e9d24e;
   }
   
   p {
     color: #666;
+    font-size: 20px;
   }
   
   ul {
     padding: 0;
   }
   
-  .link1, .link2 {
-    display: inline-block;
+  .link1, .link2, .link3 {
+    display: block;
     margin-right: 20px;
-    font-size: 16px;
+    font-size: 20px;
   }
   
-  .link1 a, .link2 a {
+  .link1 a, .link2 a, .link3 a{
     text-decoration: none;
     color: #3498db;
     transition: color 0.3s ease;
   }
   
-  .link1 a:hover, .link2 a:hover {
+  .link1 a:hover, .link2 a:hover .link3 a:hover{
     color: #3307f8;
   }
   
