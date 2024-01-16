@@ -1,8 +1,13 @@
 form {
-    max-width: 300px;
-    margin: 20px auto;
-  }
+  max-width: 350px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius:2px;
+  border: 1PX solid sandybrown;
+  border-radius: 2px;
+  position: absolute;
   
+}
   label {
     display: block;
   }
@@ -12,4 +17,11 @@ form {
     font-size: 12px;
     margin-top: 4px;
   }
-  
+  button{
+    margin-top: 10PX;
+  }
+h1{
+  background-color: black;
+  color: #f1e0e0;
+  font-size: 35px;
+}
