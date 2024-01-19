@@ -32,4 +32,7 @@ export class DatabaseService {
   sendMessage(userDetails: string) {
     this.messageSource.next(userDetails);
   }
+  getUsers(): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/userList`);
+  }
 }
