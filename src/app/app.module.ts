@@ -10,10 +10,12 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ReactiveLoginComponent } from './reactivelogin/reactivelogin.component';
+import { AuthService } from '@auth0/auth0-angular';
 
 @NgModule({
   declarations: [AppComponent, WelcomeComponent, LoginComponent, SignupComponent, ReactiveLoginComponent],
   imports: [BrowserModule, FormsModule, RouterModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule],
   bootstrap: [AppComponent],
+  providers: [AuthService]
 })
 export class AppModule {}
