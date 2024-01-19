@@ -1,10 +1,10 @@
 
-
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validator, NgForm, Validators } from '@angular/forms';
 // import { Router } from '@angular/router';
 // import { User } from '../model/user.model';
 import { DatabaseService } from '../services/database.service';
+import { Route, Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -15,7 +15,7 @@ export class SignupComponent implements OnInit {
   signupForm!: FormGroup;
   
 
-  constructor(private fb: FormBuilder, private authService: DatabaseService) {}
+  constructor(private route: Router, private fb: FormBuilder, private authService: DatabaseService) {}
 
   ngOnInit(): void {
     this.createSignUpForm();
@@ -34,9 +34,13 @@ export class SignupComponent implements OnInit {
 
   onSubmit(signupForm: FormGroup): void {
     if (signupForm.valid){
-      this.authService.signup(this.signupForm.value).pipe().subscribe((result: any)=> {
-        console.log(result.status);
-      })
+      this.authService.signup(this.signupForm.value);
+      // .pipe().subscribe((result: any)=> {
+      //   console.log(result.status);
+      //   if(result.status === true){
+      //     this.route.navigateByUrl('login');
+      //   }
+      // })
     }
   }
 }
