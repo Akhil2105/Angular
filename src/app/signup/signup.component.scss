@@ -1,33 +1,59 @@
-form
-{
-    background-color: rgb(177, 174, 199);
-    max-width: 300px;
-    max-height: 250px;
-    padding: 100px,100px;
-    border: 10px;
-    border-radius: 4px;
-    margin:left;
-
-}
-label{
-    display: block;
-    width: auto;
-    height: auto;
+body {
+    background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=900&t=st=1705780905~exp=1705781505~hmac=71384f3c62178a5efbc19528149fb86dc2a788a32dc68c1b95e7974a880ec686);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
     
 }
-button:hover{
+
+.signup-container {
+    max-width: 350px;
+    margin-right: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    
+}
+.logo {
+    width: 80px; 
+    height: auto; 
+    margin-bottom: 20px; 
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button:hover {
     background-color: bisque;
 }
-button{
+
+button {
     background-color: rgb(231, 162, 121);
     display: block;
+    margin-top: 5%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
-body{
-    border: 12px;
-    padding: 20px;
-    margin: auto;
-}
-.login{
+
+
+
+.login {
     margin: auto;
     margin-top: 10px;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
 }

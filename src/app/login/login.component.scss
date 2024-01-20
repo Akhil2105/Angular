@@ -4,9 +4,27 @@
   margin-bottom: 20px; 
 }
 body {
-  background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=900&t=st=1705780905~exp=1705781505~hmac=71384f3c62178a5efbc19528149fb86dc2a788a32dc68c1b95e7974a880ec686);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.background-image {
+  background-image: url('https://i.graphicmama.com/blog/wp-content/uploads/2018/11/08105953/IB-Identity.png');
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+}
+
+.signup-container {
+  max-width: 350px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-top: 10%;
+  text-align: center;
 }
 
 div {

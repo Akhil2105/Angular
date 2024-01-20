@@ -1,22 +1,30 @@
-
-<div>
-  <h2>Sign Up</h2>
-  <form [formGroup]="signupForm" (submit)="onSubmit(signupForm)">
-   
-    <!-- <label for="email">Email:</label>
-    <input type="email"  formControlName="email" required> -->
-
-    <label for="name">username:</label>
-    <input type="text" formControlName="username" required>
-    {{ signupForm.get('username')?.hasError('required') ? 'username is required': ''}}
-
-    <label for="password">Password:</label>
-    <input type="text" formControlName="password" required>`
-    {{ signupForm.get('password')?.hasError('required') ? 'password is required': ''}}
-
-    <button type="submit" [disabled]="signupForm.invalid">Sign Up</button>
-  </form>
-
-  <p class="login">Already a customer? <a routerLink="/login">Log in here.</a></p>
+<body>
   
+  <div class="background-image">
+    <div class="signup-container">
+      <div>
+        <img src="https://i.graphicmama.com/blog/wp-content/uploads/2018/11/08105953/IB-Identity.png" alt="Logo" class="logo">
+       </div>
+      <header>Sign Up</header>
+
+       <form [formGroup]="signupForm" (submit)="onSubmit(signupForm)">
+        <label for="username">Username:</label>
+        <input type="text" formControlName="username" required>
+        <div *ngIf="signupForm.get('username')?.hasError('required')" class="error-message">
+          Username is required
+        </div>
+
+        <label for="password">Password:</label>
+        <input type="password" formControlName="password" required>
+        <div *ngIf="signupForm.get('password')?.hasError('required')" class="error-message">
+          Password is required
+        </div>
+
+        <button type="submit" [disabled]="signupForm.invalid">Sign Up</button>
+
+        <p class="login">Already a customer? <a routerLink="/login">Log in here.</a></p>
+      </form>
+    </div>
 </div>
+</body>
+
