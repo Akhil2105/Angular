@@ -25,7 +25,7 @@ export class LoginComponent {
           this.onSubmit(this.receivedMessage)
         }
       }
-    );
+    )
   }
 
   onSubmit(loginForm: any): void {
