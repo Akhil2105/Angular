@@ -15,7 +15,12 @@ body {
     color: #333;
     background-color: #e9d24e;
   }
+  .userclass {
+    background-color: #e9d24e;
+  border: solid #ddd;
   
+
+  }
   p {
     color: #666;
     font-size: 20px;
@@ -26,7 +31,7 @@ body {
   }
   
   .link1, .link2, .link3 {
-    display: block;
+    display: inline-block;
     margin-right: 20px;
     font-size: 20px;
   }
@@ -40,4 +45,4 @@ body {
   .link1 a:hover, .link2 a:hover .link3 a:hover{
     color: #3307f8;
   }
-  
+

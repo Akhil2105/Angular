@@ -1,27 +1,29 @@
 <html>
+
 <body>
 
   <div>
-  
-  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
-  <img src="https://i.graphicmama.com/blog/wp-content/uploads/2018/11/08105953/IB-Identity.png" alt="Logo" class="logo">
 
-    <h2>Login</h2>
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" [(ngModel)]="username"  required>
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+      <img src="https://i.graphicmama.com/blog/wp-content/uploads/2018/11/08105953/IB-Identity.png" alt="Logo"
+        class="logo">
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" [(ngModel)]="password" required>
+      <h2>Login</h2>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" [(ngModel)]="username" required>
 
-    <button type="submit" [disabled]="!loginForm.valid">Login</button>
-  
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="password" required>
 
-  <p class="signup">New customer? <a routerLink="/signup">Sign up here.</a></p>
-  <p class="Home"><a routerLink="/welcome">Home</a></p>
+      <button type="submit" [disabled]="!loginForm.valid">Login</button>
 
 
-</form>
-</div>
+      <p class="signup">New customer? <a routerLink="/signup">Sign up here.</a></p>
+      <p class="Home"><a routerLink="/welcome">Home</a></p>
+
+
+    </form>
+  </div>
 
 </body>
 

@@ -1,15 +1,27 @@
+body {
+  background-image: url(https://i.graphicmama.com/blog/wp-content/uploads/2018/11/08105953/IB-Identity.png);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 form {
   max-width: 350px;
-  margin: 20px auto;
-  padding: 20px;
+  margin:  auto;
+  padding: 2rem;
   border-radius:2px;
-  border: 1PX solid sandybrown;
+  border: 2px solid sandybrown;
   border-radius: 2px;
-  position: absolute;
-  
+  position: relative;
+  background-color: hsla(9, 84%, 55%, 0.75);  
 }
   label {
     display: block;
+    font-weight: bold;
+    padding: 2re;
+  }
+  .logo {
+    max-width: 40px;
   }
   
   .error {

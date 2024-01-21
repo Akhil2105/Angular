@@ -1,13 +1,15 @@
 <html>
+
 <body>
   <div class="background-image">
     <div class="signup-container">
       <div>
-        <img src="https://i.graphicmama.com/blog/wp-content/uploads/2018/11/08105953/IB-Identity.png" alt="Logo" class="logo">
-       </div>
+        <img src="https://i.graphicmama.com/blog/wp-content/uploads/2018/11/08105953/IB-Identity.png" alt="Logo"
+          class="logo">
+      </div>
       <header>Sign Up</header>
 
-       <form [formGroup]="signupForm" (submit)="onSubmit(signupForm)">
+      <form [formGroup]="signupForm" (submit)="onSubmit(signupForm)">
         <label for="username">Username:</label>
         <input type="text" formControlName="username" required>
         <div *ngIf="signupForm.get('username')?.hasError('required')" class="error-message">
@@ -25,6 +27,7 @@
         <p class="login">Already a customer? <a routerLink="/login">Log in here.</a></p>
       </form>
     </div>
-</div>
+  </div>
 </body>
+
 </html>

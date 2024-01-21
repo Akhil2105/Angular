@@ -1,7 +1,9 @@
-// import { AuthService } from './../services/auth.service';
-import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { catchError } from 'rxjs/operators'; // Import catchError
+import { DatabaseService } from '../services/database.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-reactive-login',
@@ -10,10 +12,22 @@ import { catchError } from 'rxjs/operators'; // Import catchError
 })
 export class ReactiveLoginComponent {
   loginForm!: FormGroup;
+  subscription: Subscription | undefined;
+  receivedMessage: string | undefined;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private route: Router, private fb: FormBuilder, private authService: DatabaseService) {
+//   this.subscription=this.authService.message$.subscribe(
+//     (message)=>   {
+//       this.receivedMessage = JSON.parse(message)
+//   }
+//   )
+// }
+  }
+
+  ngOnInit(): void {
     this.createReactiveLoginForm();
   }
+      
 
   createReactiveLoginForm() {
     this.loginForm = this.fb.group({
@@ -22,9 +36,23 @@ export class ReactiveLoginComponent {
     });
   }
 
-  onSubmit() {
-    if (this.loginForm.valid) {
-      const { username, password } = this.loginForm.value;
+  onSubmit(loginForm: FormGroup): void {
+    if(this.loginForm.valid){
+      this.authService.reactivelogin(loginForm.value).subscribe((result: any) => {
+        console.log("result",result);
+        this.route.navigateByUrl('welcome');
+      },
+      (error) => {
+        console.error('Login failed:', error);
+      }
+      )
+    }
+  }
+}
+
+
+
+
   
       // this.authService.reactivelogin(username, password)
       //   .subscribe(
@@ -41,7 +69,5 @@ export class ReactiveLoginComponent {
       //       console.error('Login failed:', error);
       //     }
       //   );
-    }
-  }
-  
-}
+
+

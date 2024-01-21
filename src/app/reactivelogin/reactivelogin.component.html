@@ -1,24 +1,26 @@
-<h1>Reactive login Page
-</h1>
+<body>
 
+  <h1>Reactive login Page
+  </h1>
 
-
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+    <img src="https://i.graphicmama.com/blog/wp-content/uploads/2018/11/08105953/IB-Identity.png" alt="Logo"
+      class="logo">
     <label for="username">Username:</label>
     <input type="text" id="username" formControlName="username">
     {{ loginForm.get('username')?.hasError('required') ? 'Username is required.' : '' }}
-    
+
     <!-- <div *ngIf="loginForm.get('username')?.hasError('required')">
     username is required
-  </div> --> 
+  </div> -->
     <label for="password">Password:</label>
     <input type="password" id="password" formControlName="password">
     {{ loginForm.get('password')?.hasError('required') ? 'Password is required.' : '' }}
-  <div>
-    <button type="submit" [disabled]="loginForm.invalid">Login</button>
-  </div>
-  <div>
-    <p class="Home"><a routerLink="/welcome">Home</a></p>
-  </div>
+    <div>
+      <button type="submit" [disabled]="loginForm.invalid">Login</button>
+    </div>
+    <div>
+      <p class="Home"><a routerLink="/welcome">Home</a></p>
+    </div>
   </form>
-  
+</body>

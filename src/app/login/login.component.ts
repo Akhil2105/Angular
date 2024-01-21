@@ -21,9 +21,7 @@ export class LoginComponent {
     this.subscription = this.authService.message$.subscribe(
       (message) => {
         this.receivedMessage = JSON.parse(message)
-        if (this.receivedMessage) {
-          this.onSubmit(this.receivedMessage)
-        }
+       
       }
     )
   }

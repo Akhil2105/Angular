@@ -18,7 +18,15 @@ export class DatabaseService {
   login(data: any): Observable<any> {
     return this.http.post<any>(`${this.baseUrl}/login`, data);
   }
-
+  getUsers(): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/userList`);
+  }
+  reactivelogin(data:any): Observable<any>{
+    return this.http.post<any>(`${this.baseUrl}/reactivelogin`,data);
+  }
+  sendMessage(userDetails: string) {
+    this.messageSource.next(userDetails);
+  }
   signup(data: any): void {
     this.http.post<any>(`${this.baseUrl}/register`, data).pipe().subscribe((result: any) => {
       console.log(result.status);
@@ -27,12 +35,5 @@ export class DatabaseService {
         this.sendMessage(JSON.stringify(result.user))
       }
     })
-  }
-
-  sendMessage(userDetails: string) {
-    this.messageSource.next(userDetails);
-  }
-  getUsers(): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/userList`);
   }
 }
