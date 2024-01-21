@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validator, NgForm, Validators } from '@angular/
 // import { User } from '../model/user.model';
 import { DatabaseService } from '../services/database.service';
 import { Route, Router, RouterLink } from '@angular/router';
+import { Statement } from '@angular/compiler';
 
 @Component({
   selector: 'app-signup',
@@ -12,6 +13,8 @@ import { Route, Router, RouterLink } from '@angular/router';
 })
 export class SignupComponent implements OnInit {
   signupForm!: FormGroup;
+
+
   
 
   constructor(private route: Router, private fb: FormBuilder, private authService: DatabaseService) {}
@@ -20,6 +23,11 @@ export class SignupComponent implements OnInit {
     this.createSignUpForm();
   }
 
+  statement= "welcome new user";
+  
+  source= "/assets/logo.png";
+
+  
   createSignUpForm(){
     this.signupForm = this.fb.group({
       username : ['', [Validators.required, Validators.minLength(5)]],

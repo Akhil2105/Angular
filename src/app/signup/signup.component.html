@@ -4,10 +4,12 @@
   <div class="background-image">
     <div class="signup-container">
       <div>
-        <img src="https://i.graphicmama.com/blog/wp-content/uploads/2018/11/08105953/IB-Identity.png" alt="Logo"
+        <img [src]="source" alt="Logo"
           class="logo">
       </div>
-      <header>Sign Up</header>
+      <header class="header">
+        {{statement}}
+      </header>
 
       <form [formGroup]="signupForm" (submit)="onSubmit(signupForm)">
         <label for="username">Username:</label>
