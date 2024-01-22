@@ -13,7 +13,7 @@
 
       <form [formGroup]="signupForm" (submit)="onSubmit(signupForm)">
         <label for="username">Username:</label>
-        <input type="text" formControlName="username" required>
+        <input type="text"  formControlName="username" required>
         <div *ngIf="signupForm.get('username')?.hasError('required')" class="error-message">
           Username is required
         </div>

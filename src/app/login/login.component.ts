@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { DatabaseService } from '../services/database.service';
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
@@ -16,23 +15,28 @@ export class LoginComponent {
   password: string = '';
   subscription: Subscription;
   receivedMessage: string | undefined;
+  Password: boolean = false;
 
   constructor(private route: Router, private authService: DatabaseService) {
     this.subscription = this.authService.message$.subscribe(
       (message) => {
-        this.receivedMessage = JSON.parse(message)
-       
+        this.receivedMessage = JSON.parse(message);
       }
-    )
+    );
+  }
+
+  togglePasswordVisibility(): void {
+    this.Password = !this.Password;
+  
   }
 
   onSubmit(loginForm: any): void {
-    const isValid = loginForm.valid || !!this.receivedMessage
+    const isValid = loginForm.valid || !!this.receivedMessage;
     if (isValid) {
       this.authService.login(loginForm.value || this.receivedMessage).pipe().subscribe((result: any) => {
         console.log("result", result);
         this.route.navigateByUrl('welcome');
-      })
+      });
     }
   }
 }

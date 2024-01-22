@@ -38,7 +38,7 @@ export class ReactiveLoginComponent {
 
   onSubmit(loginForm: FormGroup): void {
     if(this.loginForm.valid){
-      this.authService.reactivelogin(loginForm.value).subscribe((result: any) => {
+      this.authService.reactivelogin(loginForm.value).pipe().subscribe((result: any) => {
         console.log("result",result);
         this.route.navigateByUrl('welcome');
       },

@@ -31,7 +31,7 @@ export class DatabaseService {
     this.http.post<any>(`${this.baseUrl}/register`, data).pipe().subscribe((result: any) => {
       console.log(result.status);
       if (result.status === true) {
-        this.route.navigateByUrl('login');
+        this.route.navigateByUrl('/welcome');
         this.sendMessage(JSON.stringify(result.user))
       }
     })

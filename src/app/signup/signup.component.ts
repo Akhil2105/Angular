@@ -23,11 +23,11 @@ export class SignupComponent implements OnInit {
     this.createSignUpForm();
   }
 
-  statement= "welcome new user";
+  statement: string = "welcome new user";
   
   source= "/assets/logo.png";
 
-  
+
   createSignUpForm(){
     this.signupForm = this.fb.group({
       username : ['', [Validators.required, Validators.minLength(5)]],
